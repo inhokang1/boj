@@ -1,15 +1,14 @@
 import sys
 import heapq
 
-n = int(sys.stdin.readline())
 heap = []
-
+n = int(sys.stdin.readline())
 for _ in range(n):
-    num = int(sys.stdin.readline())
-    if num == 0:
-        try:
-            print(-1 * heapq.heappop(heap))
-        except:
-            print(0)
+  m = int(sys.stdin.readline())
+  if m == 0:
+    if len(heap) == 0:
+      print(0)
     else:
-        heapq.heappush(heap, -num)
+      print((-1)*heapq.heappop(heap))
+  else:
+    heapq.heappush(heap, (-1)*m)
