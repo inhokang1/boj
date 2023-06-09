@@ -1,12 +1,12 @@
-word = input().lower()      # word = mississipi / baaa
-word_list = list(set(word)) # word_list = ['m', 'i', 's', 'p'] / ['b', 'a']
+arr = input().lower()
+arr_list = list(set(arr))
 cnt = []
 
-for i in word_list:         # i = m, i, s, p / b, a
-    count = word.count(i)
-    cnt.append(count)       # cnt = [4, 4, 1, 1] / [1, 3]
+for i in arr_list:
+    count = arr.count(i)
+    cnt.append(count)
 
-if cnt.count(max(cnt)) >= 2:
+if cnt.count(max(cnt)) >=2:
     print("?")
 else:
-    print(word_list[(cnt.index(max(cnt)))].upper())
+    print(arr_list[(cnt.index(max(cnt)))].upper())
