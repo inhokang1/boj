@@ -1,10 +1,12 @@
+import sys
+input = sys.stdin.readline
+
 n = int(input())
-n_list = list(map(int, input().split(' ')))
+n_list = list(map(int,input().split()))    
 n_list.sort()
 
 m = int(input())
-targets = list(map(int, input().split(' ')))
-
+target = list(map(int,input().split()))    
 
 def binary(target):
     left = 0
@@ -22,7 +24,9 @@ def binary(target):
 
 
 for i in range(m):
-    if binary(targets[i]):
+    if binary(target[i]):
         print(1)
     else:
         print(0)
+        
+
